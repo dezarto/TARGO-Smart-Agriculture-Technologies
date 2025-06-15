@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
+
+.Products-Section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 5% auto; /* Ortalamak için */
+}
+
+.ProductsRow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 20px;
+}
+
+.Productscard {
+    position: relative;
+    height: 400px;
+    width: 100%; /* Kartların genişliğini grid ile ayarlıyoruz */
+    transition: ease all 2.3s;
+    perspective: 1200px;
+}
+
+.Productscard:hover .Productscover {
+    transform: rotateX(0deg) rotateY(-180deg);
+}
+
+.Productscard:hover .Productscover:before {
+    transform: translateZ(30px);
+}
+
+.Productscard:hover .Productscover:after {
+    background-color: black;
+}
+
+.Productscard:hover .Productscover h1 {
+    transform: translateZ(100px);
+}
+
+.Productscard:hover .Productscover .price {
+    transform: translateZ(60px);
+}
+
+.Productscard:hover .Productscover a {
+    transform: translateZ(-60px) rotateY(-180deg);
+}
+
+.Productscover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s; /* Sass değişkeni yerine direkt değer kullanıldı */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.Productscover:before {
+    content: '';
+    position: absolute;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    transition: ease all 2.3s; /* Sass değişkeni yerine direkt değer kullanıldı */
+    transform-style: preserve-3d;
+    transform: translateZ(0px);
+}
+
+.Productscover:after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 2;
+    transition: ease all 1.3s;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.Productscover.item-a {
+    background-image: url('https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?auto=format&fit=crop&w=600&q=80');
+}
+
+.Productscover.item-b {
+    background-image: url('https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80');
+}
+
+.Productscover.item-c {
+    background-image: url('https://images.unsplash.com/photo-1525945518069-b924046d1385?auto=format&fit=crop&w=600&q=80');
+}
+
+.Productscover h1 {
+    font-weight: 600;
+    position: absolute;
+    bottom: 55px;
+    left: 50px;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s; /* Sass değişkeni yerine direkt değer kullanıldı */
+    z-index: 3;
+    font-size: 3em;
+    transform: translateZ(0px);
+}
+
+.Productscover .price {
+    font-weight: 200;
+    position: absolute;
+    top: 55px;
+    right: 50px;
+    color: white;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s; /* Sass değişkeni yerine direkt değer kullanıldı */
+    z-index: 4;
+    font-size: 2em;
+    transform: translateZ(0px);
+}
+
+.card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #0b0f08;
+    transform-style: preserve-3d;
+    transition: ease all 2.3s; /* Sass değişkeni yerine direkt değer kullanıldı */
+    transform: translateZ(-1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-back a {
+    transform-style: preserve-3d;
+    transition: ease transform 2.3s, ease background 0.5s; /* Sass değişkeni yerine direkt değer kullanıldı */
+    transform: translateZ(-1px) rotateY(-180deg);
+    background: transparent;
+    border: 1px solid white;
+    font-weight: 200;
+    font-size: 1.3em;
+    color: white;
+    padding: 14px 32px;
+    outline: none;
+    text-decoration: none;
+}
+
+.card-back a:hover {
+    background-color: white;
+    color: #0b0f08;
+}

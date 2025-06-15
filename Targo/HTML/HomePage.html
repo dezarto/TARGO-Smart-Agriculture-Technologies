@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/CSS/Navbar.css" />
+    <link rel="stylesheet" href="/CSS/Slider.css" />
+    <link rel="stylesheet" href="/CSS/Footer.css" />
+    <link rel="stylesheet" href="/CSS/Cards.css" />
+    <link rel="stylesheet" href="/CSS/ScrollCards.css" />
+
+
+    <script src="/Js/Slider.js" defer></script>
+  </head>
+  <body>
+    <section>
+      <!-- ************************* Navbar Part *************************-->
+      <nav id="Navbar">
+        <div class="nav-content">
+          <div class="logo">
+            <a href="/HTML/HomePage.html">Targo</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="/HTML/HomePage.html">Home</a></li>
+            <li><a href="/HTML/About.html">About</a></li>
+            <li><a href="/HTML/Products.html">Products</a></li>
+            <li><a href="/HTML/Login.html">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!--************************* Slider Part *********************************** -->
+      <div class="slider">
+        <div class="list">
+          <div class="item">
+            <img class="background-image" src="/Photos/Tarım1.jpg" alt="" />
+
+            <div class="content">
+              <div class="title">Sowing Prosperity </div>
+              <div class="type">for the Future.</div>
+              
+            </div>
+          </div>
+
+          <div class="item">
+            <img class="background-image" src="/Photos/Tarım2.jpg" alt="" />
+
+            <div class="content">
+              <div class="title">Breathing Life into </div>
+              <div class="type">Nature with Technology.</div>
+            </div>
+          </div>
+          <div class="item">
+            <img class="background-image" src="/Photos/Tarım3.jpg" alt="" />
+
+            <div class="content">
+              <div class="title">Sustainable Agriculture, </div>
+              <div class="type">Healthy Future.</div>
+            </div>
+          </div>
+          <div class="item">
+            <img class="background-image" src="/Photos/Tarım4.jpg" alt="" />
+
+            <div class="content">
+              <div class="title">Cultivating Innovation</div>
+              <div class="type"> for Tomorrow.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="thumbnail">
+          <div class="item">
+            <img src="/Photos/Tarım1.jpg" alt="" />
+          </div>
+          <div class="item">
+            <img src="/Photos/Tarım2.jpg" alt="" />
+          </div>
+          <div class="item">
+            <img src="/Photos/Tarım3.jpg" alt="" />
+          </div>
+          <div class="item">
+            <img src="/Photos/Tarım4.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="nextPrevArrows">
+          <button class="prev"><</button>
+          <button class="next">></button>
+        </div>
+      </div>
+    </section>
+
+    <script src="/Js/Slider.js"></script>
+
+    <!--************************* Slider Part Bitişi *********************************** -->
+    
+    <!--************************* Anasayfa Card Başlangıcı *********************************** -->
+    
+    <section class="HomePageCardgrid">
+      <section class="HomePageCardcontent item1">
+        <h1 class="HomePageCardText-H1">Tarımla Alakalı yazılar</h1>
+        <p>By animating a few CSS paint & composite properties, we can create fun interactions on hover & focus</p> 
+      </section>
+      <section class="HomePageCardcard item2">
+        <h2 class="HomePageCardText-H2">Hover the cards<h2>
+      </section>
+      <section class="HomePageCardcard item3">
+                <h2 class="HomePageCardText-H2">add a :focus state too!<h2>
+      </section>
+      <section class="HomePageCardcard item4">
+      </section>
+      <section class="HomePageCardcard item5">
+          <h2 class="HomePageCardText-H2">because interactions make it more fun<h2>
+      </section>
+      <section class="HomePageCardcard item7"></section>
+      <section class="HomePageCardcard item8">
+          <h2 class="HomePageCardText-H2">animating the shadow on the pseudo element makes it pop out<h2>
+      </section>
+      <section class="HomePageCardcard item9"></section>
+      <section class="HomePageCardcard item10"></section>
+      <section class="HomePageCardcard item11"></section>
+    </section>
+
+    <!--************************* Anasayfa Card Bitişi *********************************** -->
+
+    <!--************************* Anasayfa Scroll Card Başlangıcı *********************************** -->
+    <section>
+      <ul id="ScrollCards">
+        <li class="Scrollcard" id="card_1">
+          <div class="ScrollcardContent">
+            <div>
+              <h2 class="HomePageScrollCardText-H2">Yaptığımız deneyler</h2>
+              <p>Denemelerimiz ve olayın işleyişi hakkında yazılar yer alacakk.</p>
+            </div>
+            <figure>
+              <img src="/Photos/ScrollCardFoto1.jpg" alt="Image description">
+            </figure>
+          </div>
+        </li>
+        <li class="Scrollcard" id="card_2">
+          <div class="ScrollcardContent">
+            <div>
+              <h2 class="HomePageScrollCardText-H2">Card Two</h2>
+              <p class="HomePageScrollCardText-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <figure>
+              <img src="/Photos/ScrollCardFoto2.jpg" alt="Image description">
+            </figure>
+          </div>
+        </li>
+        <li class="Scrollcard" id="card_3">
+          <div class="ScrollcardContent">
+            <div>
+              <h2 class="HomePageScrollCardText-H2">Card Three</h2>
+              <p class="HomePageScrollCardText-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <figure>
+              <img src="/Photos/ScrollCardFoto3.jpg" alt="Image description">
+            </figure>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <!--************************* Anasayfa Scroll Card Bitişi *********************************** -->
+
+
+    <script>
+      let nav = document.querySelector("nav");
+      window.onscroll = function () {
+        if (document.documentElement.scrollTop > 20) {
+          nav.classList.add("sticky");
+        } else {
+          nav.classList.remove("sticky");
+        }
+      };
+    </script>
+
+    <!--************************* Footer Part  *********************************** -->
+    <div class="pg-footer">
+      <footer class="footer">
+        <svg
+          class="footer-wave-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 100"
+          preserveAspectRatio="none"
+        >
+          <path
+            class="footer-wave-path"
+            d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"
+          ></path>
+        </svg>
+        <div class="footer-content">
+          <div class="footer-content-column">
+            <div class="footer-logo">
+              <a class="footer-logo-link" href="#">
+                <span class="hidden-link-text">TARGO</span>
+                <h1>TARGO</h1>
+              </a>
+            </div>
+            <div class="footer-menu">
+              <h2 class="footer-menu-name">Get Started</h2>
+              <ul id="menu-get-started" class="footer-menu-list">
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-product"
+                >
+                  <a href="#">Buy</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-product"
+                >
+                  <a href="#">Setup</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-product"
+                >
+                  <a href="#">Start using</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-content-column">
+            <div class="footer-menu">
+              <h2 class="footer-menu-name">Company</h2>
+              <ul id="menu-company" class="footer-menu-list">
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page"
+                >
+                  <a href="#">Contact</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-taxonomy menu-item-object-category"
+                >
+                  <a href="#">About Us</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page"
+                >
+                  <a href="#">Road Map</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-menu">
+              <h2 class="footer-menu-name">Legal</h2>
+              <ul id="menu-legal" class="footer-menu-list">
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-170434"
+                >
+                  <a href="#">Privacy Notice</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-content-column">
+            <div class="footer-menu">
+              <h2 class="footer-menu-name">Quick Links</h2>
+              <ul id="menu-quick-links" class="footer-menu-list">
+               
+                <li
+                  class="menu-item menu-item-type-custom menu-item-object-custom"
+                >
+                  <a target="_blank" rel="noopener noreferrer" href="#"
+                    >Service Status</a
+                  >
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page"
+                >
+                  <a href="#">Security</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page"
+                >
+                  <a href="#">Blog</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type_archive menu-item-object-customer"
+                >
+                  <a href="#">Customers</a>
+                </li>
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page"
+                >
+                  <a href="#">Reviews</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-content-column">
+            <div class="footer-call-to-action">
+              <h2 class="footer-call-to-action-title">Let's Chat</h2>
+              <p class="footer-call-to-action-description">
+                Have a support question?
+              </p>
+              <a
+                class="footer-call-to-action-button button"
+                href="#"
+                target="_self"
+              >
+                Get in Touch
+              </a>
+            </div>
+            <div class="footer-call-to-action">
+              <h2 class="footer-call-to-action-title">You Call Us</h2>
+              <p class="footer-call-to-action-link-wrapper">
+                <a
+                  class="footer-call-to-action-link"
+                  href="tel:0124-64XXXX"
+                  target="_self"
+                >
+                  0124-64XXXX
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="footer-copyright-wrapper">
+            <p class="footer-copyright-text">
+              <a class="footer-copyright-link" href="#" target="_self">
+                ©2024. | TARGO Company | All rights reserved.
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--************************* Footer Part Bitişi *********************************** -->
+  
+  </body>
+</html>
